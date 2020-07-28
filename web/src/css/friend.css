@@ -1,0 +1,108 @@
+section#content{
+    width: 80%;
+    min-height: 800px;
+    height: 800px;
+    margin: 0 auto 0;
+    position: relative;
+    border: 0;
+    border-radius: 20px;
+    float: none;
+    overflow: visible;
+}
+
+#contLeft{
+    position: absolute;
+    left: 0;
+    width: 30%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#contMiddle{
+    position: absolute;
+    left: 30%;
+    width: 40%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#contRight{
+    position: absolute;
+    right: 0;
+    width: 30%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+section *{
+    padding: 10px;
+}
+
+#contLeft div{
+    width: 100%;
+}
+
+ form input.submit {
+    padding: 2px 10px;
+    border-radius: 6px;
+    background: -webkit-linear-gradient(#57a8d6, #65fc4b);
+    font-size: 13px;
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    outline: none;
+}
+
+form input.submit:hover {
+    background: -webkit-linear-gradient(#3386ba, #5fb253);
+}
+
+#contLeft button{
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: black;
+    text-align: center;
+    outline: none;
+    display: inline;
+}
+
+#contLeft button.accept{
+    background: #d4ffd8;
+}
+
+#contLeft button.reject{
+    background: #ffdadc;
+}
+
+input{
+    padding: 2px;
+}
+
+#contMiddle button{
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: black;
+    text-align: center;
+    outline: none;
+    display: inline;
+}
+
+#contMiddle button.apply{
+    background: #ddf8ff;
+}
+
+#contRight button.chat{
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: black;
+    text-align: center;
+    outline: none;
+    display: inline;
+    background: #fde0ff;
+}
