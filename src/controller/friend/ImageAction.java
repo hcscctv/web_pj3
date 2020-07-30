@@ -21,11 +21,6 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name = "controller.friend.ImageAction", urlPatterns = {"/ImageAction"})
 public class ImageAction extends HttpServlet {
 
-    /**
-     * 执行登陆的业务处理
-     * @param request:发送上来的请求
-     * @return destJsp：目标URL
-     */
     public void init() throws ServletException
     {
         super.init();

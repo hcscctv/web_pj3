@@ -13,6 +13,7 @@
     <div class="box">
         <script src="./src/js/sha1.js"></script>
         <script src="./src/js/part.js"></script>
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
         <script>function x() {
             document.getElementById('hidden_password').value=sha1(document.getElementById('show_password').value)
         }</script>
@@ -30,7 +31,10 @@
             <input type="hidden" id="hidden_password" name="password">
 
             <div class="inputbox">
-                <input type="text" name="check" id="check" required> <img src="ImageAction">
+                <input type="text" name="check" id="check" required> <img id="iamge" src="ImageAction">
+                <script>$('#iamge').click(function () {
+                    this.src="ImageAction?id="+Math.random();
+                });</script>
                 <label>check</label>
             </div>
 

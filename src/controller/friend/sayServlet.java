@@ -18,7 +18,8 @@ public class sayServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int uid2=Integer.parseInt(request.getParameter("key"));
         int uid1=Integer.parseInt(request.getParameter("user"));
-        String message=request.getParameter("message");
-        DAO.update("insert into message (uid1, uid2, message, state, time) VALUES (?,?,?,0,now())",uid1,uid2,message);
+        request.setCharacterEncoding("utf-8");
+        String message=request.getParameter("message").toString();
+        DAO.update("insert into message (uid1, uid2, message, state, time) VALUES (?,?,N'"+message+"',0,now())",uid1,uid2);
     }
 }

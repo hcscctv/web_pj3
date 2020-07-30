@@ -89,12 +89,16 @@ project
 >MySQL 10.4.11+tomcat 9.0.36+ Java 1.8.0_152
 可在chrome浏览器及firefox浏览器完善运行
 可在其余主流浏览器正常运行，可能出现极小范围布局错位
+#### 数据结构及数据库结构
+![](diagram.png)
 
 ### 前端设计
 >前端布局沿用pj1设计 （https://github.com/hcscctv/web_pj） 采用html+js（以jQuery为主）+css
 
 ## 项目基本要求完成情况
 >基础功能全部实现，后续解释部分功能实现方法，未写明的部分面试时详细解释
+#### 首页轮播
+>>参考 _https://github.com/hcscctv/web_pj_中的首页轮播图加上js使其可以切换
 #### 二级联动
 >>为防止过多城市的国家查询速度较慢，采用本地静态json文件的方式进行二级联动，但是再服务器上由于带宽限制还是会有一定延迟
 ```js
@@ -149,8 +153,6 @@ $(function () {
 ```js
 document.getElementById('hidden_password').value=sha1(document.getElementById('show_password').value)
 ```
-
-
 
 ## bonus完成情况
 
@@ -284,6 +286,13 @@ public class ImageAction extends HttpServlet {
         return new Color(r, g, b);
     }
 }
+```
+>>点击验证码可以刷新验证码
+```js
+<img id="iamge" src="ImageAction">
+                <script>$('#iamge').click(function () {
+                    this.src="ImageAction?id="+Math.random();
+                });</script>
 ```
 
 #### 好友用户实时聊天

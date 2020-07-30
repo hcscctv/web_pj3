@@ -33,7 +33,7 @@ public class searchServlet extends HttpServlet {
             boolean flag=false;
             for (String wd:wds){
                 if (flag)sql+="and ";
-                sql+="description like '%"+wd+"%' ";
+                sql+="content like '%"+wd+"%' ";
                 flag=true;
             }
         }
@@ -43,6 +43,7 @@ public class searchServlet extends HttpServlet {
         }
         else sql+="order by updatetime desc";
         request.setAttribute("result",DAO.getForList(travelimage.class,sql));
+        request.setAttribute("value",request.getParameter("title"));
         request.getRequestDispatcher("Search.jsp").forward(request,response);
     }
 }

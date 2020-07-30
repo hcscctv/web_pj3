@@ -1,6 +1,5 @@
 <%@ page import="priv.datastructure.traveluser" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
         <head>
             <meta charset="utf-8">
             <base target="_blank">

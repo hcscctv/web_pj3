@@ -106,7 +106,10 @@
                     <td>
                         <h6>identifying code<p><%=(request.getAttribute("check")==null?"":"wrong")%></p></h6>
                         <input type="password" id="check" name="check">
-                        <img src="ImageAction">
+                        <img id="iamge" src="ImageAction">
+                        <script>$('#iamge').click(function () {
+                            this.src="ImageAction?id="+Math.random();
+                        });</script>
                     </td>
                 </tr>
             </table>

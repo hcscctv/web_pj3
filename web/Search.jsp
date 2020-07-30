@@ -55,8 +55,8 @@
         <div class="title">Search</div>
         <form action="searchServlet">
             <input type="radio" name="filter_way" value="by_title" checked>Filter by Title <br>
-            <input type="radio" name="filter_way" value="by_description">Filter by Description <br>
-            <input id="title" name="title" type="text"><br>
+            <input type="radio" name="filter_way" value="by_description">Filter by content <br>
+            <input id="title" name="title" type="text" value="<%=(request.getAttribute("value")==null?"":request.getAttribute("value"))%>"><br>
             <input type="submit" value="Filter"> <input type="radio" checked name="sort_way" value="by_favor">sort by hot index  <input type="radio" name="sort_way" value="by_updatetime">sort by update time
         </form>
     </div>
